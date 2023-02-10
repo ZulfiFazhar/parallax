@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Parallax Website</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Logo</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#sec">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <img src="assets/img/2/parallax-04.png" id="sky">
+        <img src="assets/img/2/parallax-05.png" id="sun">
+        <img src="assets/img/2/parallax-06.png" id="cloud-right">
+        <img src="assets/img/2/parallax-07.png" id="cloud-left">
+        <img src="assets/img/2/parallax-03.png" id="mountain-back">
+        <h1 id="copy">Hello</h1>
+        <img src="assets/img/2/parallax-02.png" id="mountain-front">
+        <img src="assets/img/2/parallax-01.png" id="tree">
+    </section>
+
+    <section class="sec" id="sec">
+        <div class="project-typo">
+            <h2>FEATURED POSTS</h2>
+            <a href="#">See All Posts</a>
+        </div>
+        
+        <div class="project">
+            <div class="item">
+                <div class="img img-first"></div>
+                <div class="card">
+                    <h3>Lorem, ipsum.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure obcaecati necessitatibus alias?</p>
+                    <a href="#" class="project-link link">See more</a>
+                </div>
+            </div>
+        
+            <div class="item">
+                <div class="img img-second"></div>
+                <div class="card">
+                    <h3>Lorem, ipsum.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure obcaecati necessitatibus alias?</p>
+                    <a href="#" class="project-link link">See more</a>
+                </div>
+            </div>
+        
+            <div class="item three">
+                <div class="img img-third"></div>
+                <div class="card">
+                    <h3>Lorem, ipsum.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure obcaecati necessitatibus alias?</p>
+                    <a href="#" class="project-link link">See more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script>
+    let sun = document.getElementById('sun');
+    let back = document.getElementById('mountain-back');
+    let front = document.getElementById('mountain-front');
+    let cloudRight = document.getElementById('cloud-right');
+    let cloudLeft = document.getElementById('cloud-left');
+    let copy = document.getElementById('copy');
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll', function () {
+        let value = window.scrollY;
+        sun.style.bottom = value * 0.5 + 'px';
+        sun.style.left = value * 0.5 + 'px';
+        back.style.top = value * 1 + 'px';
+        front.style.top = value * 0.5 + 'px';
+        cloudRight.style.left = value * 1 + 'px';
+        cloudLeft.style.left = value * -1 + 'px';
+        copy.style.marginBottom = value * 2 + 'px';
+        header.style.Top = value * 0.5 + 'px';
+        });
+</script>
+</html>
