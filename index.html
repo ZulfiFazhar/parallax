@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <title>Parallax Website</title>
 </head>
 <body>
@@ -14,13 +15,13 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#sec">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#third">Blog</a></li>
+                <li><a href="#fourth">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
+    <section class="hero">
         <img src="assets/img/2/parallax-04.png" id="sky">
         <img src="assets/img/2/parallax-05.png" id="sun">
         <img src="assets/img/2/parallax-06.png" id="cloud-right">
@@ -32,42 +33,38 @@
     </section>
 
     <section class="sec" id="sec">
-        <h2>Parallax</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus rem in recusandae tempore perspiciatis praesentium debitis exercitationem vitae aut, cumque minima fugiat magni ab, ipsam amet repudiandae. Facilis amet iusto impedit, esse magni iste veniam maiores similique quod ipsum, eveniet quasi consequuntur non possimus laboriosam natus quam obcaecati odio nobis eaque aliquam. Distinctio ipsum ad officiis impedit, culpa iusto vel optio explicabo facere sed sapiente architecto at reiciendis exercitationem alias cum numquam beatae? Quae reiciendis praesentium, laudantium, est quibusdam distinctio aperiam, doloremque illum deleniti eius officiis earum ullam labore asperiores nesciunt possimus eaque iste ex libero? Dolor blanditiis praesentium deleniti.</p>
-        <div class="project-typo">
-            <h2>FEATURED POSTS</h2>
-            <a href="#">See All Posts</a>
-        </div>
-        
-        <div class="project">
-            <div class="item">
-                <div class="img img-first"></div>
-                <div class="card">
-                    <h3>Lorem, ipsum.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure obcaecati necessitatibus alias?</p>
-                    <a href="#" class="project-link link">See more</a>
-                </div>
-            </div>
-        
-            <div class="item">
-                <div class="img img-second"></div>
-                <div class="card">
-                    <h3>Lorem, ipsum.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure obcaecati necessitatibus alias?</p>
-                    <a href="#" class="project-link link">See more</a>
-                </div>
-            </div>
-        
-            <div class="item three">
-                <div class="img img-third"></div>
-                <div class="card">
-                    <h3>Lorem, ipsum.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure obcaecati necessitatibus alias?</p>
-                    <a href="#" class="project-link link">See more</a>
-                </div>
-            </div>
+        <h2>Parallax Website</h2>
+    </section>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#24132c" fill-opacity="1" d="M0,64L48,69.3C96,75,192,85,288,101.3C384,117,480,139,576,133.3C672,128,768,96,864,106.7C960,117,1056,171,1152,165.3C1248,160,1344,96,1392,64L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+    
+    <section class="third" id="third">
+        <h2 class="blog-header">Blog</h2>
+        <div class="carousel">
+            <div class="card">Page One</div>
+            <div class="card">Page Two</div>
+            <div class="card">Page Three</div>
         </div>
     </section>
+
+    <section class="fourth" id="fourth">
+        <h2>Contact</h2>
+        <form action="submit-form.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Made with Love ♥</p>
+    </footer>
 </body>
 
 <script>
